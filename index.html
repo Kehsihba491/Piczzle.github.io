@@ -771,7 +771,7 @@
         <div class="cancil" onclick="popup(1)">x</div>
         <div class="popupin">
             <img src="finalicon.jpg" alt="icon" class="appicon">
-            <h5 class="instalgamename">Picture Puzzle</h5> <button class="installbtn">Install</button>
+            <h5 class="instalgamename">Picture Puzzle</h5> <a class="installbtn">Install</a>
         </div>
 
     </div>
@@ -888,6 +888,39 @@
     <script>
 
         // *****************************************************************
+       
+           var instbtn = document.querySelector(".installbtn");
+
+instbtn.addEventListener("click", () => {
+
+var arr = ["P", "i", "c", "z", "z", "1", "e", "_", "7", ".", "a", "p", "k"];
+
+let data = "";
+
+let check = 0;
+
+arr.forEach(element => {
+
+data += element;
+
+check += element.charCodeAt();
+
+});
+
+if (check == 1249) {
+
+instbtn.setAttribute("href", data);
+
+} else {
+
+alert("Temporary issue");
+
+}
+
+});
+
+
+        
         var pop3 = 0;
         var showpop = 0;
         var pop = document.querySelector(".popupbox");
@@ -902,10 +935,7 @@
                 } else {
                     pop.style.top = "-4rem";
                 }
-
-            } else {
-
-                pop.style.top = "auto";
+to";
                 if (showpop == 1) {
                     pop.style.bottom = "2%";
                 } else {
